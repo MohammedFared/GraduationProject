@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:text="برجاء ادخال الكود الذى اعطاه لك العداد"
         android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:fontFamily="NotoKufiArabic-Bold.ttf"/>
 
     <EditText
         android:textColorHint="#e1e1e1"

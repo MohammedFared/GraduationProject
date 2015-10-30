@@ -15,7 +15,7 @@
         </activity>
         <activity
             android:name=".Main"
-            android:label="@string/title_activity_main"
+            android:label="الرئيسيه"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".MemberInfo"
-            android:label="@string/title_activity_member_info"
+            android:label="معلومات الافراد"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
