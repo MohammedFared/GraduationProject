@@ -1,0 +1,83 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.example.egypt.app.Fragment_AgriculturalActivities">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="هل لدى الاسره ايا من الحيازات الاتيه" />
+
+    <CheckBox
+        android:id="@+id/earth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/hint"
+        android:text="أرض زراعيه"
+       />
+
+    <CheckBox
+        android:id="@+id/cow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/earth"
+        android:text="ماشيه"
+         />
+
+    <CheckBox
+        android:id="@+id/sheep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cow"
+        android:text="أغنام/ماعز"
+         />
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/sheep"
+        android:text="دواجن"
+         />
+
+    <CheckBox
+        android:id="@+id/bee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chicken"
+        android:text="مناحل"
+         />
+
+    <CheckBox
+        android:id="@+id/machines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bee"
+        android:text="الات زراعيه"
+         />
+
+    <CheckBox
+        android:id="@+id/fish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/machines"
+        android:text="أقفاص سمكيه"
+         />
+
+</RelativeLayout>
+</ScrollView>

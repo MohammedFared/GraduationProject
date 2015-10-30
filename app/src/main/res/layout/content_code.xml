@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".code"
+    tools:showIn="@layout/activity_code"
+    android:background="@drawable/xxhdpi">
+
+    <TextView
+        android:id="@+id/tv_codeEntering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="برجاء ادخال الكود الذى اعطاه لك العداد"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+    <EditText
+        android:textColorHint="#e1e1e1"
+        android:id="@+id/et_codeEntering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_codeEntering"
+        android:layout_marginTop="16dp"
+        android:hint="الكود"
+        android:inputType="number"
+        android:maxLines="1"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:background="@color/colorPrimary"
+        android:id="@+id/b_codeEntering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="nextScreen"
+        android:text="أدخل الكود"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>
