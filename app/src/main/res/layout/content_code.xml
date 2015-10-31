@@ -11,7 +11,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".code"
     tools:showIn="@layout/activity_code"
-    android:background="@drawable/xxhdpi">
+    android:background="@drawable/bckgnd">
 
     <TextView
         android:id="@+id/tv_codeEntering"
