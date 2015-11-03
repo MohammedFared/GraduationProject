@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GP</string>
+    <string name="app_name">التعداد السكانى 2016</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">Main</string>
     <string-array name="houseType">
@@ -9,14 +9,93 @@
         <item>حجره أو أكثر فى وحده سكنيه</item>
         <item>حجره مستقله او اكثر</item>
         <item>دكان او اكثر</item>
-        <item>كشك/ عشه/ خيمه
-</item>
+        <item>كشك/ عشه/ خيمه</item>
         <item>حوش مدفن</item>
         <item>أخرى</item>
     </string-array>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <string-array name="headRelation">
+        <item>رئيس الاسره</item>
+        <item>زوج/زوجه</item>
+        <item>ابن/ابنه</item>
+        <item>زوج ابن/زوجه ابنه</item>
+        <item>حفيد/حفيدة</item>
+        <item>أب/أم</item>
+        <item>أخ/أخت</item>
+        <item>أقارب/أخرون</item>
+        <item>خادم/خادمة</item>
+        <item>لا توجد صلة قرابة</item>
+    </string-array>
+
+    <string-array name="where">
+        <item>مقيم و حاضر</item>
+        <item>مقيم و غائب داخل مصر</item>
+        <item>مقيم و غائب خارج مصر</item>
+        <item>غير مقيم و حاضر</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>بالسنوات الكاملة</item>
+        <item>بالشهور الكاملة للمواليد الاقل من سنه</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>ذكر</item>
+        <item>انثى</item>
+    </string-array>
+
+    <string-array name="relagion">
+        <item>مسلم</item>
+        <item>مسيحى</item>
+        <item>يهودى</item>
+        <item>أخرى</item>
+    </string-array>
+
+    <string-array name="nationality">
+        <item>مصرى</item>
+        <item>عربى</item>
+        <item>أجنبى</item>
+    </string-array>
+
+    <string-array name="eduState">
+        <item>أقل من السن</item>
+        <item>أمى</item>
+        <item>يقرأ و يكتب بدون مؤهل</item>
+        <item>محو أمية</item>
+        <item>تربية فكرية</item>
+        <item>ابتدائية</item>
+        <item>إعدادية</item>
+        <item>ثانوية/م.متوسط</item>
+        <item>م.فوق متوسط</item>
+        <item>مؤهل جامعى</item>
+        <item>دبلوم عالى</item>
+        <item>ماجستير</item>
+        <item>دكتوراه</item>
+
+    </string-array>
+
+    <string-array name="marState">
+        <item>أقل من السن</item>
+        <item>لم يتزوج</item>
+        <item>عقد قران</item>
+        <item>متزوج</item>
+        <item>مطلق</item>
+        <item>أرمل</item>
+
+    </string-array>
+
+    <string-array name="numOfWifes">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_member_info">MemberInfo</string>
+    <string name="title_activity_spinner_item">spinnerItem</string>
+    <string name="title_activity_spinner_layout">SpinnerLayout</string>
 </resources>

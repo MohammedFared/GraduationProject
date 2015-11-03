@@ -14,7 +14,7 @@
     android:fillViewport="false">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/et_newMemberName"
@@ -22,164 +22,180 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:hint="الاسم"
+            android:maxLines="1"
+            android:inputType="textPersonName"
             />
 
-    <TextView
-        android:layout_below="@id/et_newMemberName"
-        android:layout_alignParentRight="true"
-        android:id="@+id/tv_familyHeadRelation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="الصلة برئيس الأسرة"
-        />
-
-        <Spinner
+        <RelativeLayout
             android:layout_below="@id/et_newMemberName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            >
-        </Spinner>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_familyHeadRelation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الصلة برئيس الأسرة"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_familyHeadRelation"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_where"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="حالة التواجد"
-            />
+            <Spinner
+                android:id="@+id/sp_familyHeadRelation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/headRelation"
+                android:spinnerMode="dialog"
+                android:layout_below="@+id/tv_familyHeadRelation"
+                android:layout_centerHorizontal="true">
+            </Spinner>
 
-        <Spinner
-            android:layout_below="@id/tv_familyHeadRelation"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حالة التواجد"
+                android:layout_below="@id/sp_familyHeadRelation"
+                android:layout_centerHorizontal="true"/>
 
-            >
-        </Spinner>
+            <Spinner
+                android:id="@+id/sp_where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/where"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_where"
+                android:layout_centerHorizontal="true">
+            </Spinner>
 
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_where"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_age"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="العمر"
-            />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="العمر"
+                android:layout_below="@id/sp_where"
+                android:layout_centerHorizontal="true" />
 
-        <Spinner
-            android:layout_below="@id/tv_where"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            <Spinner
+                android:id="@+id/sp_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/age"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_age"
+                android:layout_centerHorizontal="true">
+            </Spinner>
 
-            >
-        </Spinner>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="النوع"
+                android:layout_below="@id/sp_age"
+                android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_age"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_sex"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="النوع"
-            />
+            <Spinner
+                android:id="@+id/sp_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/sex"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_sex"
+                android:layout_centerHorizontal="true">
+            </Spinner>
 
-        <Spinner
-            android:layout_below="@id/tv_age"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_religion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الديانة"
+                android:layout_below="@id/sp_sex"
+                android:layout_centerHorizontal="true" />
 
-            >
-        </Spinner>
+            <Spinner
+                android:id="@+id/sp_religion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/relagion"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_religion"
+                android:layout_centerHorizontal="true"
+                >
+            </Spinner>
 
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_sex"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_religion"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="الديانة"
-            />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tv_nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الجنسية"
+                android:layout_below="@id/sp_religion"
+                android:layout_centerHorizontal="true" />
 
-        <Spinner
-            android:layout_below="@id/tv_sex"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            <Spinner
+                android:id="@+id/sp_nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/nationality"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_nationality"
+                android:layout_centerHorizontal="true"
+                >
+            </Spinner>
 
-            >
-        </Spinner>
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="16dp"
+                android:id="@+id/tv_edu_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الحالة التعليمية"
+                android:layout_below="@id/sp_nationality"
+                android:layout_centerHorizontal="true"
+                />
 
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_religion"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_nationality"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="الجنسية"
-            />
+            <Spinner
+                android:id="@+id/sp_eduState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/eduState"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_edu_state"
+                android:layout_centerHorizontal="true"
+                >
+            </Spinner>
 
-        <Spinner
-            android:layout_below="@id/tv_religion"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="16dp"
+                android:id="@+id/tv_marital_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الحالة الزواجية"
+                android:layout_below="@id/sp_eduState"
+                android:layout_centerHorizontal="true"
+                />
 
-            >
-        </Spinner>
-
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_nationality"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_edu_state"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="الحالة التعليمية"
-            />
-
-        <Spinner
-            android:layout_below="@id/tv_nationality"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
-
-            >
-        </Spinner>
-
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_edu_state"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_marital_state"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="الحالة الزواجية"
-            />
-
-        <Spinner
-            android:layout_below="@id/tv_edu_state"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:entries="@array/houseType"
-            >
-        </Spinner>
-
+            <Spinner
+                android:id="@+id/sp_marital_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/marState"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tv_marital_state"
+                android:layout_centerHorizontal="true"
+                >
+            </Spinner>
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

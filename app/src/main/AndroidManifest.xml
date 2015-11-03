@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".Splash"
-            android:label="@string/title_activity_splash"
+            android:label="التعداد السكانى 2016"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
