@@ -196,6 +196,15 @@
                 android:layout_centerHorizontal="true"
                 >
             </Spinner>
+
+
+            <TextView
+                android:id="@+id/whereHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اذا كان غائب اكثر من 6 شهور اتصل ب 0112156"
+                />
+
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
