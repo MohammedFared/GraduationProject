@@ -51,25 +51,39 @@
                 android:layout_centerHorizontal="true">
             </Spinner>
 
-            <TextView
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
-                android:id="@+id/tv_where"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="حالة التواجد"
-                android:layout_below="@id/sp_familyHeadRelation"
-                android:layout_centerHorizontal="true"/>
 
-            <Spinner
-                android:id="@+id/sp_where"
+            <RelativeLayout
+                android:id="@+id/relativeLayout_where"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/where"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_where"
-                android:layout_centerHorizontal="true">
-            </Spinner>
+                android:layout_below="@id/sp_familyHeadRelation">
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_where"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="حالة التواجد"
+                    android:layout_centerHorizontal="true"/>
+
+                <Spinner
+                    android:id="@+id/sp_where"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/where"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_where"
+                    android:layout_centerHorizontal="true">
+                </Spinner>
+                <TextView
+                    android:id="@+id/whereHint"
+                    android:layout_below="@id/sp_where"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="اذا كان غائب اكثر من 6 شهور اتصل ب 0112156" />
+
+            </RelativeLayout>
 
             <TextView
                 android:layout_marginTop="16dp"
@@ -78,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="العمر"
-                android:layout_below="@id/sp_where"
+                android:layout_below="@id/relativeLayout_where"
                 android:layout_centerHorizontal="true" />
 
             <Spinner
@@ -88,8 +102,17 @@
                 android:entries="@array/age"
                 android:spinnerMode="dialog"
                 android:layout_below="@id/tv_age"
-                android:layout_centerHorizontal="true">
+                android:layout_alignParentRight="true">
             </Spinner>
+            <EditText
+                android:layout_alignParentRight="true"
+                android:id="@+id/et_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:layout_below="@id/sp_age"/>
 
             <TextView
                 android:layout_marginTop="16dp"
@@ -98,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="النوع"
-                android:layout_below="@id/sp_age"
+                android:layout_below="@id/et_age"
                 android:layout_centerHorizontal="true" />
 
             <Spinner
@@ -153,6 +176,11 @@
                 >
             </Spinner>
 
+            <RelativeLayout
+                android:id="@+id/relativeLayout_eduState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sp_nationality">
             <TextView
                 android:textColor="@color/colorPrimary"
                 android:layout_marginTop="16dp"
@@ -160,7 +188,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="الحالة التعليمية"
-                android:layout_below="@id/sp_nationality"
                 android:layout_centerHorizontal="true"
                 />
 
@@ -175,6 +202,15 @@
                 >
             </Spinner>
 
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_marrageState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/relativeLayout_eduState">
             <TextView
                 android:textColor="@color/colorPrimary"
                 android:layout_marginTop="16dp"
@@ -182,7 +218,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="الحالة الزواجية"
-                android:layout_below="@id/sp_eduState"
                 android:layout_centerHorizontal="true"
                 />
 
@@ -196,16 +231,19 @@
                 android:layout_centerHorizontal="true"
                 >
             </Spinner>
+            </RelativeLayout>
 
 
-            <TextView
-                android:layout_below="@id/sp_where"
-                android:id="@+id/whereHint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="اذا كان غائب اكثر من 6 شهور اتصل ب 0112156"
-                />
+
 
         </RelativeLayout>
+        <Button
+            android:textColor="@android:color/white"
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="حفظ"
+            android:background="@color/colorPrimary"/>
     </RelativeLayout>
 </ScrollView>
