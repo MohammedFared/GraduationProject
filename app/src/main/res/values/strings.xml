@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">Main</string>
     <string-array name="houseType">
+        <item></item>
         <item>المبنى بأكمله</item>
         <item>دور أو أكثر</item>
         <item>شقه أو أكثر</item>
@@ -15,6 +16,7 @@
     </string-array>
 
     <string-array name="headRelation">
+        <item>اختار</item>
         <item>رئيس الاسره</item>
         <item>زوج/زوجه</item>
         <item>ابن/ابنه</item>
@@ -28,6 +30,7 @@
     </string-array>
 
     <string-array name="where">
+        <item>اختار</item>
         <item>مقيم و حاضر</item>
         <item>مقيم و غائب داخل مصر</item>
         <item>مقيم و غائب خارج مصر</item>
@@ -35,16 +38,19 @@
     </string-array>
 
     <string-array name="age">
+        <item>اختار</item>
         <item>بالسنوات الكاملة</item>
         <item>بالشهور الكاملة للمواليد الاقل من سنه</item>
     </string-array>
 
     <string-array name="sex">
+        <item>اختار</item>
         <item>ذكر</item>
         <item>انثى</item>
     </string-array>
 
     <string-array name="relagion">
+        <item>اختار</item>
         <item>مسلم</item>
         <item>مسيحى</item>
         <item>يهودى</item>
@@ -52,12 +58,14 @@
     </string-array>
 
     <string-array name="nationality">
+        <item>اختار</item>
         <item>مصرى</item>
         <item>عربى</item>
         <item>أجنبى</item>
     </string-array>
 
     <string-array name="eduState">
+        <item>اختار</item>
         <item>أقل من السن</item>
         <item>أمى</item>
         <item>يقرأ و يكتب بدون مؤهل</item>
@@ -75,6 +83,7 @@
     </string-array>
 
     <string-array name="marState">
+        <item>اختار</item>
         <item>أقل من السن</item>
         <item>لم يتزوج</item>
         <item>عقد قران</item>
@@ -85,6 +94,7 @@
     </string-array>
 
     <string-array name="numOfWifes">
+        <item>اختار</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

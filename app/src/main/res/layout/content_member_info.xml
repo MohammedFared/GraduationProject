@@ -85,34 +85,55 @@
 
             </RelativeLayout>
 
-            <TextView
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
-                android:id="@+id/tv_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="العمر"
-                android:layout_below="@id/relativeLayout_where"
-                android:layout_centerHorizontal="true" />
 
-            <Spinner
-                android:id="@+id/sp_age"
+            <RelativeLayout
+                android:id="@+id/relativeLayout_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/age"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_age"
-                android:layout_alignParentRight="true">
-            </Spinner>
-            <EditText
-                android:layout_alignParentRight="true"
-                android:id="@+id/et_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLines="1"
-                android:maxLength="2"
-                android:layout_below="@id/sp_age"/>
+                android:layout_below="@id/relativeLayout_where">
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="العمر"
+                    android:layout_centerHorizontal="true" />
+
+                <Spinner
+                    android:id="@+id/sp_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/age"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_age"
+                    android:layout_alignParentRight="true">
+                </Spinner>
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="2"
+                    android:layout_below="@id/tv_age"
+                    android:layout_toLeftOf="@id/sp_age"/>
+                <CheckBox
+                    android:id="@+id/checkID"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/et_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="هل لك بطاقه رقم قومى"/>
+                <CheckBox
+                    android:id="@+id/checkAddress"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/checkID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="هل عنوان البطاقه مطابق لعنوان الاقامه الحالى"/>
+            </RelativeLayout>
 
             <TextView
                 android:layout_marginTop="16dp"
@@ -121,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="النوع"
-                android:layout_below="@id/et_age"
+                android:layout_below="@id/relativeLayout_age"
                 android:layout_centerHorizontal="true" />
 
             <Spinner
@@ -134,74 +155,97 @@
                 android:layout_centerHorizontal="true">
             </Spinner>
 
-            <TextView
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
-                android:id="@+id/tv_religion"
+            <RelativeLayout
+                android:id="@+id/relativeLayout_religion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="الديانة"
-                android:layout_below="@id/sp_sex"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@id/sp_sex">
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_religion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الديانة"
+                    android:layout_centerHorizontal="true" />
 
-            <Spinner
-                android:id="@+id/sp_religion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/relagion"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_religion"
-                android:layout_centerHorizontal="true"
-                >
-            </Spinner>
+                <Spinner
+                    android:id="@+id/sp_religion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/relagion"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_religion"
+                    android:layout_centerHorizontal="true"
+                    >
+                </Spinner>
+                <EditText
+                    android:id="@+id/et_relagion"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/sp_religion"
+                    android:hint="الديانه"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
 
-            <TextView
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
-                android:id="@+id/tv_nationality"
+            <RelativeLayout
+                android:id="@+id/relativeLayout_nationality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="الجنسية"
-                android:layout_below="@id/sp_religion"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@id/relativeLayout_religion">
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_nationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الجنسية"
+                    android:layout_centerHorizontal="true" />
 
-            <Spinner
-                android:id="@+id/sp_nationality"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/nationality"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_nationality"
-                android:layout_centerHorizontal="true"
-                >
-            </Spinner>
+                <Spinner
+                    android:id="@+id/sp_nationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/nationality"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_nationality"
+                    android:layout_centerHorizontal="true"
+                    >
+                </Spinner>
+                <EditText
+                    android:id="@+id/et_nationality"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/sp_nationality"
+                    android:hint="الجنسيه"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_eduState"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sp_nationality">
-            <TextView
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="16dp"
-                android:id="@+id/tv_edu_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="الحالة التعليمية"
-                android:layout_centerHorizontal="true"
-                />
+                android:layout_below="@id/relativeLayout_nationality">
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/tv_edu_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الحالة التعليمية"
+                    android:layout_centerHorizontal="true"
+                    />
 
-            <Spinner
-                android:id="@+id/sp_eduState"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/eduState"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_edu_state"
-                android:layout_centerHorizontal="true"
-                >
-            </Spinner>
-
+                <Spinner
+                    android:id="@+id/sp_eduState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/eduState"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_edu_state"
+                    android:layout_centerHorizontal="true"
+                    >
+                </Spinner>
             </RelativeLayout>
 
 
