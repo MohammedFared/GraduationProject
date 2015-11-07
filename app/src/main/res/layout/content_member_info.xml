@@ -111,21 +111,31 @@
                     android:layout_alignParentRight="true">
                 </Spinner>
                 <EditText
-                    android:id="@+id/et_age"
+                    android:id="@+id/et_ageMonth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:maxLines="1"
                     android:maxLength="2"
-                    android:layout_below="@id/tv_age"
-                    android:layout_toLeftOf="@id/sp_age"/>
+                    android:layout_below="@id/sp_age"
+                    android:layout_alignParentRight="true"/>
+                <EditText
+                    android:id="@+id/et_ageYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="2"
+                    android:layout_below="@id/sp_age"
+                    android:layout_alignParentRight="true"/>
                 <CheckBox
                     android:id="@+id/checkID"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@id/et_age"
+                    android:layout_below="@id/et_ageYear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="هل لك بطاقه رقم قومى"/>
+                    android:text="هل لك بطاقه رقم قومى"
+                    android:onClick="checkIDClicked"/>
                 <CheckBox
                     android:id="@+id/checkAddress"
                     android:layout_alignParentRight="true"
@@ -180,7 +190,7 @@
                     >
                 </Spinner>
                 <EditText
-                    android:id="@+id/et_relagion"
+                    android:id="@+id/et_religion"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/sp_religion"
                     android:hint="الديانه"
@@ -223,7 +233,7 @@
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_eduState"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relativeLayout_nationality">
                 <TextView
@@ -243,51 +253,71 @@
                     android:entries="@array/eduState"
                     android:spinnerMode="dialog"
                     android:layout_below="@id/tv_edu_state"
-                    android:layout_centerHorizontal="true"
-                    >
+                    android:layout_centerHorizontal="true">
                 </Spinner>
+
+                <EditText
+                    android:hint="اسم التخصص"
+                    android:id="@+id/et_major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_eduState"
+                    android:layout_alignParentRight="true" />
             </RelativeLayout>
 
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_marrageState"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_below="@id/relativeLayout_eduState">
-            <TextView
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="16dp"
-                android:id="@+id/tv_marital_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="الحالة الزواجية"
-                android:layout_centerHorizontal="true"
-                />
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/tv_marital_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الحالة الزواجية"
+                    android:layout_centerHorizontal="true"
+                    />
 
-            <Spinner
-                android:id="@+id/sp_marital_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/marState"
-                android:spinnerMode="dialog"
-                android:layout_below="@id/tv_marital_state"
-                android:layout_centerHorizontal="true"
-                >
-            </Spinner>
+                <Spinner
+                    android:id="@+id/sp_marital_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/marState"
+                    android:spinnerMode="dialog"
+                    android:layout_below="@id/tv_marital_state"
+                    android:layout_alignParentRight="true"
+                    >
+                </Spinner>
+                <EditText
+                    android:hint="السن عند الزواج الاول"
+                    android:id="@+id/et_marAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_marital_state"
+                    android:layout_alignParentRight="true"/>
+                <EditText
+                    android:hint="عدد الزوجات فى العصمه"
+                    android:id="@+id/et_wifesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_marAge"
+                    android:layout_alignParentRight="true"/>
             </RelativeLayout>
 
 
 
 
         </RelativeLayout>
-        <Button
-            android:textColor="@android:color/white"
-            android:id="@+id/button_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="حفظ"
-            android:background="@color/colorPrimary"/>
+        <!--<Button-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:id="@+id/button_save"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:text="حفظ"-->
+            <!--android:background="@color/colorPrimary"/>-->
     </RelativeLayout>
 </ScrollView>
