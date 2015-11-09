@@ -13,27 +13,34 @@
     tools:showIn="@layout/activity_code"
     android:background="@drawable/bckgnd">
 
-    <TextView
-        android:id="@+id/tv_codeEntering"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="برجاء ادخال الكود الذى اعطاه لك العداد"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
-        android:fontFamily="NotoKufiArabic-Bold.ttf"/>
+        android:layout_centerVertical="true"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:id="@+id/tv_codeEntering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="برجاء ادخال الكود الذى اعطاه لك العداد"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
 
-    <EditText
-        android:textColorHint="#e1e1e1"
-        android:id="@+id/et_codeEntering"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_codeEntering"
-        android:layout_marginTop="16dp"
-        android:hint="الكود"
-        android:inputType="number"
-        android:maxLines="1"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/white" />
+        <EditText
+            android:textColorHint="#e1e1e1"
+            android:id="@+id/et_codeEntering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_codeEntering"
+            android:layout_marginTop="16dp"
+            android:hint="الكود"
+            android:inputType="number"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+    </RelativeLayout>
+
 
     <Button
         android:background="@color/colorPrimary"
@@ -44,4 +51,10 @@
         android:onClick="nextScreen"
         android:text="أدخل الكود"
         android:textColor="@android:color/white"/>
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:layout_toEndOf="@+id/relativeLayout" />
 </RelativeLayout>

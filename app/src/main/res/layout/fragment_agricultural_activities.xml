@@ -1,91 +1,96 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:layout_marginTop="16dp"
     tools:context="com.example.egypt.app.Fragment_AgriculturalActivities">
 
-    <!-- TODO: Update blank fragment layout -->
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
+    <Switch
+        android:id="@+id/switch1"
         android:paddingTop="16dp"
+        android:layout_alignParentRight="true"
         android:textColor="@color/colorPrimary"
-        android:id="@+id/hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="هل لدى الاسره ايا من الحيازات الاتيه:" />
-
-    <CheckBox
-        android:id="@+id/earth"
-        android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/hint"
-        android:text="أرض زراعيه"/>
+        android:text="هل لدى الاسره ايا من الحيازات الاتيه:"
+        android:layoutDirection="rtl"/>
+
 
     <CheckBox
-        android:id="@+id/cow"
-        android:layout_margin="16dp"
+        android:id="@+id/check_earth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/earth"
-        android:text="ماشيه" />
+        android:layout_below="@id/switch1"
+        android:layout_margin="16dp"
+        android:text="أرض زراعيه"
+        android:layoutDirection="rtl"/>
 
     <CheckBox
-        android:id="@+id/sheep"
-        android:layout_margin="16dp"
+        android:id="@+id/check_cow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="ماشيه"
+        android:layout_alignTop="@+id/check_earth"
+        android:layout_centerHorizontal="true"
+        android:layoutDirection="rtl"/>
+
+    <CheckBox
+        android:id="@+id/check_sheep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/cow"
+        android:layout_below="@id/check_cow"
+        android:layout_margin="16dp"
         android:text="أغنام/ماعز"
-         />
+        android:layoutDirection="rtl"/>
 
     <CheckBox
-        android:id="@+id/chicken"
-        android:layout_margin="16dp"
+        android:id="@+id/check_chicken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/sheep"
+        android:enabled="false"
         android:text="دواجن"
-         />
+        android:layout_alignTop="@+id/check_sheep"
+        android:layout_centerHorizontal="true"
+        android:layoutDirection="rtl"/>
 
     <CheckBox
-        android:id="@+id/bee"
-        android:layout_margin="16dp"
+        android:id="@+id/check_bee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/chicken"
+        android:layout_below="@id/check_chicken"
+        android:layout_margin="16dp"
         android:text="مناحل"
-         />
+        android:layoutDirection="rtl"/>
 
     <CheckBox
-        android:id="@+id/machines"
-        android:layout_margin="16dp"
+        android:id="@+id/check_machines"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/bee"
+        android:enabled="false"
         android:text="الات زراعيه"
-         />
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/check_sheep"
+        android:layout_toLeftOf="@+id/check_fish"
+        android:layout_toStartOf="@+id/check_fish" />
 
     <CheckBox
-        android:id="@+id/fish"
-        android:layout_margin="16dp"
+        android:id="@+id/check_fish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/machines"
+        android:layout_below="@id/check_machines"
+        android:layout_margin="16dp"
         android:text="أقفاص سمكيه"
-         />
+        android:layoutDirection="rtl"/>
 
 </RelativeLayout>
-</ScrollView>

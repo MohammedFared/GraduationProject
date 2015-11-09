@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">Main</string>
     <string-array name="houseType">
-        <item></item>
+        <item>اختار</item>
         <item>المبنى بأكمله</item>
         <item>دور أو أكثر</item>
         <item>شقه أو أكثر</item>
@@ -15,6 +15,18 @@
         <item>أخرى</item>
     </string-array>
 
+    <string-array name="Possession">
+        <item>اختار</item>
+        <item>ايجار قديم</item>
+        <item>ايجار جديد</item>
+        <item>ايجار مفروش</item>
+        <item>ملك</item>
+        <item>هبه</item>
+        <item>ميزه عينيه</item>
+        <item>ايجار قديم</item>
+        <item>اخرى</item>
+    </string-array>
+    
     <string-array name="headRelation">
         <item>اختار</item>
         <item>رئيس الاسره</item>
@@ -28,6 +40,43 @@
         <item>خادم/خادمة</item>
         <item>لا توجد صلة قرابة</item>
     </string-array>
+    
+    <string-array name="kitchenNBathroom">
+        <item>اختار</item>
+        <item>خاص</item>
+        <item>مشترك</item>
+        <item>لا يوجد</item>
+    </string-array>
+
+    <string-array name="waterSource">
+        <item>اختار</item>
+        <item>حنفيه داخل المسكن</item>
+        <item>حنفيه داخل المبنى</item>
+        <item>حنفيه خارج المبنى</item>
+        <item>طلمبه</item>
+        <item>ابار</item>
+        <item>اخرى</item>
+    </string-array>
+
+    <string-array name="light">
+        <item>اختار</item>
+        <item>كهرباء شبكه عامه</item>
+        <item>مولد كهربائى</item>
+        <item>طاقه شمسيه</item>
+        <item>بوتاجاز</item>
+        <item>كيروسين</item>
+        <item>اخرى</item>
+    </string-array>
+
+    <string-array name="sewage">
+        <item>اختار</item>
+        <item>شبكه عامه</item>
+        <item>شبكه اهليه</item>
+        <item>ترنش</item>
+        <item>الى ارض فضاء</item>
+        <item>اخرى</item>
+    </string-array>
+
 
     <string-array name="where">
         <item>اختار</item>

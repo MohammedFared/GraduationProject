@@ -1,138 +1,194 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.egypt.app.Fragment_HousingConditions">
 
-    <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <TextView
+        android:id="@+id/tv_houseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="16dp"
+        android:text="نوع الوحدة السكنية"
+        android:textColor="@color/colorPrimary" />
+
+    <Spinner
+        android:id="@+id/sp_houseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_houseType"
+        android:entries="@array/houseType"></Spinner>
+
+    <TextView
+        android:id="@+id/tv_having"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_houseType"
+        android:layout_marginTop="16dp"
+        android:text="الحيازة"
+        android:textColor="@color/colorPrimary" />
+
+    <Spinner
+        android:id="@+id/sp_having"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_houseType"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_having"
+        android:entries="@array/Possession"></Spinner>
+
+    <TextView
+        android:id="@+id/tv_numberOfrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_having"
+        android:layout_marginTop="16dp"
+        android:text="عدد الحجرات بما فيها الصالة"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/et_numberOfrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_having"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_numberOfrooms"
+        android:hint="عدد الحجرات"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_numberOfrooms"
+        android:layout_marginTop="16dp"
+        android:text="المنافع"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_kitchen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_contents"
+        android:layout_margin="16dp"
+        android:layout_marginRight="16dp"
+        android:text="المطبخ"
+        android:textColor="@color/colorPrimary"
+        android:typeface="monospace" />
+    <Spinner
+        android:id="@+id/sp_kitchen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_contents"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_kitchen"
+        android:entries="@array/kitchenNBathroom"></Spinner>
+
+    <TextView
+        android:id="@+id/tv_Bathrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_kitchen"
+        android:layout_margin="16dp"
+        android:layout_marginRight="16dp"
+        android:text="الحمام"
+        android:textColor="@color/colorPrimary" />
+    <Spinner
+        android:id="@+id/et_bathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_kitchen"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_kitchen"
+        android:entries="@array/kitchenNBathroom"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="مصدر مياه الشرب"
+        android:id="@+id/tv_water"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_Bathrooms"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+    <Spinner
+        android:id="@+id/et_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tv_Bathrooms"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/tv_water"
+        android:entries="@array/waterSource"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="وسيله الاضاءه الرئيسيه"
+        android:id="@+id/tv_light"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_water"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+    <Spinner
+        android:id="@+id/et_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tv_water"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/tv_light"
+        android:entries="@array/light"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="وسيله الصرف الصحى"
+        android:id="@+id/tv_sewage"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_light"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+    <Spinner
+        android:id="@+id/et_sewage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tv_light"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/tv_sewage"
+        android:entries="@array/sewage"></Spinner>
+    
+    <Button
+        android:id="@+id/housingConditions"
+        android:text="احفظ"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:onClick="save"/>
+</RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_houseType"
-            android:paddingTop="16dp"
-            android:textColor="@color/colorPrimary"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="نوع الوحدة السكنية"
-            />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sp_houseType"
-            android:entries="@array/houseType"
-            android:layout_toLeftOf="@id/tv_houseType"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp">
-        </Spinner>
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_houseType"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_having"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="الحيازة"
-            />
-
-        <Spinner
-            android:layout_below="@id/tv_houseType"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sp_having"
-            android:entries="@array/houseType"
-            android:layout_toLeftOf="@id/tv_having"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp">
-        </Spinner>
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_having"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_numberOfrooms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="عدد الحجرات بما فيها الصالة"
-            />
-
-        <EditText
-            android:layout_toLeftOf="@id/tv_numberOfrooms"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_below="@id/tv_having"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_numberOfrooms"
-            android:hint="عدد الحجرات"
-            android:textSize="12sp"
-            />
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_numberOfrooms"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tv_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="المنافع"
-            />
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/tv_contents"
-            android:id="@+id/tv_kitchen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_marginRight="16dp"
-            android:text="المطبخ"
-            android:typeface="monospace"/>
-
-        <Spinner
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/tv_contents"
-            android:id="@+id/sp_kitchen"
-            android:layout_toLeftOf="@id/tv_kitchen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/houseType"
-            >
-        </Spinner>
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_marginRight="16dp"
-            android:layout_margin="16dp"
-            android:layout_below="@id/tv_kitchen"
-            android:id="@+id/tv_Bathrooms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="الحمام"/>
-
-        <Spinner
-            android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@id/tv_kitchen"
-            android:layout_marginLeft="16dp"
-            android:layout_below="@id/tv_kitchen"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/et_bathroom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/houseType"
-            >
-        </Spinner>
-
-    </RelativeLayout>
-
-</ScrollView>
