@@ -128,7 +128,6 @@
         <item>دبلوم عالى</item>
         <item>ماجستير</item>
         <item>دكتوراه</item>
-
     </string-array>
 
     <string-array name="marState">
@@ -139,7 +138,6 @@
         <item>متزوج</item>
         <item>مطلق</item>
         <item>أرمل</item>
-
     </string-array>
 
     <string-array name="numOfWifes">
@@ -149,7 +147,6 @@
         <item>3</item>
         <item>4</item>
     </string-array>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

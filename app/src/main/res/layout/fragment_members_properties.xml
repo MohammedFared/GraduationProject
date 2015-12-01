@@ -1,5 +1,5 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,11 +12,13 @@
     <android.support.design.widget.FloatingActionButton
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_add_white_18dp"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="add"/>
+        android:onClick="add"
+        app:borderWidth="0dp"/>
 
 </RelativeLayout>

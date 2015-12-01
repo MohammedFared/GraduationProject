@@ -17,7 +17,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/et_newMemberName"
+            android:id="@+id/et_MemberName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -27,47 +27,59 @@
 
         <RelativeLayout
             android:id="@+id/relativeLayout_container"
-            android:layout_below="@id/et_newMemberName"
+            android:layout_below="@id/et_MemberName"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
                 android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
                 android:id="@+id/tv_familyHeadRelation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="الصلة برئيس الأسرة"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true" />
+                android:layout_alignParentRight="true"
+                android:textSize="10sp"
+                android:textColor="@android:color/tertiary_text_dark" />
 
             <Spinner
+                android:layout_below="@id/tv_familyHeadRelation"
                 android:id="@+id/sp_familyHeadRelation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:entries="@array/headRelation"
                 android:spinnerMode="dialog"
-                android:layout_below="@+id/tv_familyHeadRelation"
-                android:layout_centerHorizontal="true">
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true">
             </Spinner>
+
+            <View
+                android:id="@+id/sep1"
+                android:layout_below="@id/sp_familyHeadRelation"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
 
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_where"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sp_familyHeadRelation">
+                android:layout_below="@id/sep1">
 
                 <TextView
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/colorPrimary"
                     android:id="@+id/tv_where"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="حالة التواجد"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"/>
 
                 <Spinner
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:id="@+id/sp_where"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,34 +93,44 @@
                     android:layout_below="@id/sp_where"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="اذا كان غائب اكثر من 6 شهور اتصل ب 0112156" />
+                    android:text="الغائب اقل من 6 شهور" />
 
             </RelativeLayout>
 
+            <View
+                android:layout_marginTop="16dp"
+                android:id="@+id/sep2"
+                android:layout_below="@id/relativeLayout_where"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout_where">
+                android:layout_below="@id/sep2">
 
                 <TextView
                     android:id="@+id/tv_age"
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="العمر"
                     android:layout_centerHorizontal="true" />
 
                 <Spinner
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:id="@+id/sp_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/age"
                     android:spinnerMode="dialog"
-                    android:layout_below="@id/tv_age"
-                    android:layout_alignParentRight="true">
+                    android:layout_below="@id/tv_age">
                 </Spinner>
                 <EditText
                     android:enabled="false"
@@ -146,20 +168,32 @@
                     android:layout_below="@id/checkID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="هل عنوان البطاقه مطابق لعنوان الاقامه الحالى"/>
+                    android:text="هل عنوان البطاقه مطابق لعنوان الاقامه الحالى"
+                    android:onClick="checkAddressClicked"/>
             </RelativeLayout>
 
+            <View
+                android:id="@+id/sep7"
+                android:layout_below="@id/relativeLayout_age"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
             <TextView
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textSize="10sp"
+                android:textColor="@android:color/tertiary_text_dark"
                 android:id="@+id/tv_sex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="النوع"
-                android:layout_below="@id/relativeLayout_age"
+                android:layout_below="@id/sep7"
                 android:layout_centerHorizontal="true" />
 
             <Spinner
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
                 android:id="@+id/sp_sex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,14 +203,23 @@
                 android:layout_centerHorizontal="true">
             </Spinner>
 
+            <View
+                android:id="@+id/sep3"
+                android:layout_below="@id/sp_sex"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
             <RelativeLayout
                 android:id="@+id/relativeLayout_religion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sp_sex">
+                android:layout_below="@id/sep3">
                 <TextView
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"
                     android:id="@+id/tv_religion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -185,6 +228,8 @@
 
                 <Spinner
                     android:id="@+id/sp_religion"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/relagion"
@@ -194,6 +239,7 @@
                     >
                 </Spinner>
                 <EditText
+                    android:layout_marginRight="16dp"
                     android:enabled="false"
                     android:id="@+id/et_religion"
                     android:layout_alignParentRight="true"
@@ -204,14 +250,23 @@
                     android:maxLines="1"/>
             </RelativeLayout>
 
+            <View
+                android:id="@+id/sep4"
+                android:layout_below="@id/relativeLayout_religion"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
             <RelativeLayout
                 android:id="@+id/relativeLayout_nationality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout_religion">
+                android:layout_below="@id/sep4">
                 <TextView
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"
                     android:id="@+id/tv_nationality"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -220,6 +275,8 @@
 
                 <Spinner
                     android:id="@+id/sp_nationality"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/nationality"
@@ -229,6 +286,7 @@
                     >
                 </Spinner>
                 <EditText
+                    android:layout_marginRight="16dp"
                     android:enabled="false"
                     android:id="@+id/et_nationality"
                     android:layout_alignParentRight="true"
@@ -239,13 +297,22 @@
                     android:maxLines="1"/>
             </RelativeLayout>
 
+            <View
+                android:id="@+id/sep5"
+                android:layout_below="@id/relativeLayout_nationality"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
             <RelativeLayout
                 android:id="@+id/relativeLayout_eduState"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout_nationality">
+                android:layout_below="@id/sep5">
                 <TextView
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"
                     android:layout_marginTop="16dp"
                     android:id="@+id/tv_edu_state"
                     android:layout_width="wrap_content"
@@ -256,6 +323,8 @@
 
                 <Spinner
                     android:id="@+id/sp_eduState"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/eduState"
@@ -265,6 +334,7 @@
                 </Spinner>
 
                 <EditText
+                    android:layout_marginRight="16dp"
                     android:enabled="false"
                     android:hint="اسم التخصص"
                     android:id="@+id/et_major"
@@ -275,14 +345,22 @@
                     android:maxLines="1" />
             </RelativeLayout>
 
+            <View
+                android:id="@+id/sep6"
+                android:layout_below="@id/relativeLayout_eduState"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
 
             <RelativeLayout
                 android:id="@+id/relativeLayout_marrageState"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout_eduState">
+                android:layout_below="@id/sep6">
                 <TextView
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/tertiary_text_dark"
                     android:layout_marginTop="16dp"
                     android:id="@+id/tv_marital_state"
                     android:layout_width="wrap_content"
@@ -293,15 +371,17 @@
 
                 <Spinner
                     android:id="@+id/sp_marital_state"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/marState"
                     android:spinnerMode="dialog"
                     android:layout_below="@id/tv_marital_state"
-                    android:layout_alignParentRight="true"
                     >
                 </Spinner>
                 <EditText
+                    android:layout_marginRight="16dp"
                     android:enabled="false"
                     android:id="@+id/et_marAge"
                     android:hint="السن عند الزواج الاول"
@@ -313,6 +393,7 @@
                     android:layout_alignParentRight="true"
                     android:maxLines="1"/>
                 <EditText
+                    android:layout_marginRight="16dp"
                     android:enabled="false"
                     android:id="@+id/et_wifesNumber"
                     android:hint="عدد الزوجات فى العصمه"
@@ -326,8 +407,6 @@
             </RelativeLayout>
 
 
-
-
         </RelativeLayout>
         <Button
             android:layout_below="@id/relativeLayout_container"
@@ -337,6 +416,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="حفظ"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorPrimary"
+            android:onClick="save"/>
     </RelativeLayout>
 </ScrollView>

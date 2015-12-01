@@ -1,194 +1,424 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.egypt.app.Fragment_HousingConditions">
-
-    <TextView
-        android:id="@+id/tv_houseType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:paddingTop="16dp"
-        android:text="نوع الوحدة السكنية"
-        android:textColor="@color/colorPrimary" />
-
-    <Spinner
-        android:id="@+id/sp_houseType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/tv_houseType"
-        android:entries="@array/houseType"></Spinner>
-
-    <TextView
-        android:id="@+id/tv_having"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_houseType"
-        android:layout_marginTop="16dp"
-        android:text="الحيازة"
-        android:textColor="@color/colorPrimary" />
-
-    <Spinner
-        android:id="@+id/sp_having"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/tv_houseType"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/tv_having"
-        android:entries="@array/Possession"></Spinner>
-
-    <TextView
-        android:id="@+id/tv_numberOfrooms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_having"
-        android:layout_marginTop="16dp"
-        android:text="عدد الحجرات بما فيها الصالة"
-        android:textColor="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/et_numberOfrooms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_having"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/tv_numberOfrooms"
-        android:hint="عدد الحجرات"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/tv_contents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_numberOfrooms"
-        android:layout_marginTop="16dp"
-        android:text="المنافع"
-        android:textColor="@color/colorPrimary" />
-
-    <TextView
-        android:id="@+id/tv_kitchen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_contents"
-        android:layout_margin="16dp"
-        android:layout_marginRight="16dp"
-        android:text="المطبخ"
-        android:textColor="@color/colorPrimary"
-        android:typeface="monospace" />
-    <Spinner
-        android:id="@+id/sp_kitchen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_contents"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/tv_kitchen"
-        android:entries="@array/kitchenNBathroom"></Spinner>
-
-    <TextView
-        android:id="@+id/tv_Bathrooms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_kitchen"
-        android:layout_margin="16dp"
-        android:layout_marginRight="16dp"
-        android:text="الحمام"
-        android:textColor="@color/colorPrimary" />
-    <Spinner
-        android:id="@+id/et_bathroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/tv_kitchen"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/tv_kitchen"
-        android:entries="@array/kitchenNBathroom"></Spinner>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="مصدر مياه الشرب"
-        android:id="@+id/tv_water"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_Bathrooms"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"/>
-    <Spinner
-        android:id="@+id/et_water"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/tv_Bathrooms"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@id/tv_water"
-        android:entries="@array/waterSource"></Spinner>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="وسيله الاضاءه الرئيسيه"
-        android:id="@+id/tv_light"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_water"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"/>
-    <Spinner
-        android:id="@+id/et_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/tv_water"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@id/tv_light"
-        android:entries="@array/light"></Spinner>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="وسيله الصرف الصحى"
-        android:id="@+id/tv_sewage"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_light"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"/>
-    <Spinner
-        android:id="@+id/et_sewage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/tv_light"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@id/tv_sewage"
-        android:entries="@array/sewage"></Spinner>
-    
-    <Button
-        android:id="@+id/housingConditions"
-        android:text="احفظ"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="save"/>
-</RelativeLayout>
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tv_houseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="نوع الوحدة السكنية"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark" />
+
+        <Spinner
+            android:id="@+id/sp_houseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:entries="@array/houseType"
+            android:spinnerMode="dialog"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_houseType"></Spinner>
+
+
+
+        <View
+            android:id="@+id/sep1"
+            android:layout_below="@id/sp_houseType"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/tv_having"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sep1"
+            android:layout_marginTop="16dp"
+            android:text="الحيازة"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark" />
+
+        <Spinner
+            android:id="@+id/sp_having"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_having"
+            android:layout_marginRight="16dp"
+            android:spinnerMode="dialog"
+            android:entries="@array/Possession"></Spinner>
+
+        <EditText
+            android:id="@+id/et_rent"
+            android:layout_below="@id/sp_having"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="الايجار الشهرى"
+            android:gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/tv_having"
+            android:layout_toStartOf="@+id/tv_having" />
+
+        <View
+            android:id="@+id/sep2"
+            android:layout_below="@id/et_rent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/tv_numberOfrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sep2"
+            android:layout_marginTop="16dp"
+            android:text="عدد الحجرات بما فيها الصالة"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark" />
+
+        <EditText
+            android:id="@+id/et_numberOfrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_numberOfrooms"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="عدد الحجرات"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/sep3"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/et_numberOfrooms"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/tv_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sep3"
+            android:layout_marginTop="16dp"
+            android:text="المنافع"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark" />
+
+        <TextView
+            android:id="@+id/tv_kitchen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_contents"
+            android:layout_marginRight="16dp"
+            android:text="المطبخ"
+            android:typeface="monospace"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark"/>
+        <Spinner
+            android:id="@+id/sp_kitchen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_kitchen"
+            android:layout_marginRight="32dp"
+            android:entries="@array/kitchenNBathroom"
+            android:spinnerMode="dialog"
+            android:layout_alignParentRight="true"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_Bathrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sp_kitchen"
+            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
+            android:text="الحمام"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark" />
+        <Spinner
+            android:id="@+id/sp_bathroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_Bathrooms"
+            android:layout_marginRight="32dp"
+            android:entries="@array/kitchenNBathroom"
+            android:spinnerMode="dialog"></Spinner>
+
+        <View
+            android:id="@+id/sep4"
+            android:layout_below="@id/sp_bathroom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مصدر مياه الشرب"
+            android:id="@+id/tv_water"
+            android:layout_below="@id/sep4"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark"/>
+        <Spinner
+            android:id="@+id/sp_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+            android:layout_below="@id/tv_water"
+            android:layout_alignParentRight="true"
+            android:spinnerMode="dialog"
+            android:entries="@array/waterSource"></Spinner>
+
+
+
+        <View
+            android:id="@+id/sep5"
+            android:layout_below="@id/sp_water"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="وسيله الاضاءه الرئيسيه"
+            android:id="@+id/tv_light"
+            android:layout_below="@id/sep5"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark"/>
+        <Spinner
+            android:id="@+id/sp_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_light"
+            android:layout_marginRight="16dp"
+            android:entries="@array/light"
+            android:spinnerMode="dialog"></Spinner>
+
+        <View
+            android:id="@+id/sep6"
+            android:layout_below="@id/sp_light"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/tv_sewage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="وسيله الصرف الصحى"
+            android:layout_below="@id/sep6"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:textSize="10sp"
+            android:textColor="@android:color/tertiary_text_dark"/>
+
+        <Spinner
+            android:id="@+id/sp_sewage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_sewage"
+            android:layout_marginRight="16dp"
+            android:entries="@array/sewage"
+            android:spinnerMode="dialog"></Spinner>
+
+        <View
+            android:id="@+id/sep7"
+            android:layout_below="@id/sp_sewage"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_gas"
+            android:layout_below="@id/sep7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_gas"
+                android:text="الوقود و الطاقه المستخدمه فى الطهى"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="10sp"
+                android:textColor="@android:color/tertiary_text_dark"/>
+
+            <CheckBox
+                android:id="@+id/gasBomb"
+                android:layout_below="@id/tv_gas"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="انبوبه بوتاجاز"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/gas"
+                android:layout_below="@id/gasBomb"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="غاز طبيعى"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/elec"
+                android:text="كهرباء"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/gas"
+                android:layout_alignRight="@+id/ceroseen"
+                android:layout_alignEnd="@+id/ceroseen" />
+
+            <CheckBox
+                android:id="@+id/ceroseen"
+                android:text="كيروسين"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/gas"
+                android:layout_centerHorizontal="true" />
+
+            <CheckBox
+                android:id="@+id/other"
+                android:layout_below="@id/ceroseen"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="أخرى"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/sep8"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/relativeLayout_gas"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_vehicles"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/relativeLayout_gas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Switch
+                android:layoutDirection="rtl"
+                android:id="@+id/switch_vehicles"
+                android:text="هل تملك ايا من وسائل المواصلات الاتيه"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="10sp"
+                android:textColor="@android:color/tertiary_text_dark" />
+
+            <TextView
+                android:id="@+id/et_switchHint"
+                android:layout_margin="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/switch_vehicles"
+                android:text="ادخل عدد كل من وسائل المواصلات الاتيه"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_car"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/et_switchHint"
+                android:hint="سيارة ملاكى"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_motorBike"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:hint="موتوسيكل"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_car"
+                android:layout_alignLeft="@+id/switch_vehicles"
+                android:layout_alignStart="@+id/switch_vehicles" />
+
+            <EditText
+                android:id="@+id/et_bike"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:layout_below="@id/et_motorBike"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:hint="دراجة"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_transportOther"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:hint="أخرى"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_bike"
+                android:layout_alignRight="@+id/et_motorBike"
+                android:layout_alignEnd="@+id/et_motorBike" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_below="@id/relativeLayout_vehicles"
+            android:layout_marginTop="16dp"
+            android:id="@+id/button_housingConditions"
+            android:text="احفظ"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="save"/>
+
+    </RelativeLayout>
+
+</ScrollView>
